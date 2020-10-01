@@ -17,6 +17,7 @@ use PHPUnit\Framework\Error\Notice;
 /**
  * Tests the SFTP client.
  *
+ * @group sftp_client
  * @coversDefaultClass \Drupal\sftp_client\SftpClient
  */
 class SftpClientTest extends UnitTestCase {
