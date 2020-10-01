@@ -336,7 +336,7 @@ class SftpClientTest extends UnitTestCase {
 
     static::assertCurrentConnectionId($sftp_client, 'my-server:2200:BR0kEN');
 
-    $instance_settings = static::getObjectAttribute($sftp_client, 'settings');
+    $instance_settings = static::getNonPublicAttribute($sftp_client, 'settings');
 
     static::assertInstanceOf(RSA::class, $instance_settings['password']);
     static::assertSame($settings['password'], $instance_settings['password']->password);
