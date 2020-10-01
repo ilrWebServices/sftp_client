@@ -1,0 +1,10 @@
+/*
+.*
+
+!/.git*
+!/composer.json
+!/README.md
+!/sftp_client.*
+
+!/src/
+!/tests/

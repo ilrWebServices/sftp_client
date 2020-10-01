@@ -1,0 +1,6 @@
+name: 'SFTP Client'
+description: 'The SFTP client for programmatic use.'
+package: Developer
+type: module
+php: 7.3
+core_version_requirement: ^8 || ^9
