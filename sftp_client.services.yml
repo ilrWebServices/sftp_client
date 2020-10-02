@@ -5,4 +5,4 @@ services:
       - '@settings'
       - '@file_system'
       - '@logger.factory'
-      - '?@key.repository'
+      - '@?key.repository'
