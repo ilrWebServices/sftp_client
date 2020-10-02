@@ -254,6 +254,36 @@ class SftpClientTest extends UnitTestCase {
   }
 
   /**
+   * Tests the SFTP client constructor.
+   */
+  public function testWithoutKeyRepository(): void {
+    $this->expectException(\LogicException::class);
+    $this->expectExceptionMessage('The following SFTP connections require the "key" Drupal module to be installed and enabled to use RSA key for authorization: "sftp", "my_con".');
+
+    new SftpClient(
+      new Settings([
+        'sftp' => [
+          'sftp' => [
+            'port' => 2202,
+            'server' => 'propeople.com.ua',
+            'username' => 'propeople',
+            'key_id' => 'the_key1',
+          ],
+          'my_con' => [
+            'port' => 2202,
+            'server' => 'propeople.com.ua',
+            'username' => 'propeople',
+            'key_id' => 'the_key2',
+          ],
+        ],
+      ]),
+      $this->fileSystem,
+      $this->loggerChannelFactory,
+      NULL,
+    );
+  }
+
+  /**
    * Tests directory removal.
    *
    * @covers ::removeDir
