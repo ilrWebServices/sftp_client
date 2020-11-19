@@ -6,5 +6,9 @@
 !/README.md
 !/sftp_client.*
 
-!/src/
-!/tests/
+# Do not add the trailing slash at the end because Composer
+# will package the archive without these directories included.
+# https://github.com/composer/composer/issues/9464
+# https://www.drupal.org/project/sftp_client/issues/3183503
+!/src
+!/tests
