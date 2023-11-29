@@ -14,9 +14,9 @@
         "phpseclib/phpseclib": "^2.0.29"
     },
     "require-dev": {
-        "drupal/key": "^1.8"
+        "drupal/key": "^1.17"
     },
     "suggest": {
-        "drupal/key": "^1.8"
+        "drupal/key": "^1.17"
     }
 }

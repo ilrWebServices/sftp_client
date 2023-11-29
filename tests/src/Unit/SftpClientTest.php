@@ -330,7 +330,7 @@ class SftpClientTest extends UnitTestCase {
       static::fail('The SFTP connection must not be established due to credentials incorrectness.');
     }
     catch (Notice $e) {
-      static::assertSame('Cannot connect to my-server:4000. Error 0. php_network_getaddresses: getaddrinfo failed: Name or service not known', $e->getMessage());
+      static::assertSame('Cannot connect to my-server:4000. Error 0. php_network_getaddresses: getaddrinfo for my-server failed: Name or service not known', $e->getMessage());
     }
 
     // The `delete()` should have been call `connect()` that must
